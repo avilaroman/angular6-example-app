@@ -29,21 +29,21 @@ export class AppComponent implements OnInit {
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
 
-    this.title.setTitle('Angular Example App');
+    this.title.setTitle('Biblioteca EGO Material Angular');
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
             this.meta.updateTag({
               name: 'description',
-              content: 'Angular Example app with Angular CLI, Angular Material and more'
+              content: 'Biblioteca para EGO en Angular Material'
             });
             break;
           case '/' + AppConfig.routes.heroes:
-            this.title.setTitle('Heroes list');
+            this.title.setTitle('Lista de Libros');
             this.meta.updateTag({
-              name: 'description',
-              content: 'List of super-heroes'
+              name: 'descripcion',
+              content: 'Lista de Libros'
             });
             break;
         }
